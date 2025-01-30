@@ -1,0 +1,45 @@
+{
+    "manifest_version": 3,
+    "name": "Problem Bookmark",
+    "version": "1.0",
+    "author": "Daksh Singh Rathore",
+    "description": "This is a chrome extension for bookmarking problems of my course (AlgoZenith).",
+    "permissions": [
+      "storage",
+      "tabs"
+    ],
+    "content_scripts": [
+      {
+        "matches": [
+          "https://maang.in/problems/*"
+        ],
+        "js": [
+          "content.js"
+        ]
+      }
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "web_accessible_resources": [
+      {
+        "resources": [
+          "assets/bookmark.png",
+          "assets/play.png",
+          "assets/delete.png",
+          "assets/save.png"
+        ],
+        "matches":["<all_urls>"]
+      }
+    ],
+    "action": {
+      "default_icon": {
+        "16": "assets/ext-icon.png",
+        "24": "assets/ext-icon.png",
+        "32": "assets/ext-icon.png"
+      },
+      "default_title": "AZ Problem Bookmark",
+      "default_popup": "popup.html"
+    }
+  }
+  
