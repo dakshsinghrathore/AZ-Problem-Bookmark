@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlgoZenith Bookmarks</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+     
+        body {
+            font-family: 'Poppins', sans-serif;
+            width: 340px;
+            padding: 20px;
+            background: #EFF5FF;
+            text-align: center;
+            border-radius: 12px;
+        }
+
+        h1 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #172B4D;
+            font-weight: 600;
+        }
+
+    
+        #bookmarks {
+            list-style: none;
+            padding: 0;
+            margin-top: 10px;
+        }
+
+        .bookmark {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #BFD9FF;
+            padding: 12px;
+            border-radius: 8px;
+            box-shadow: 0 3px 6px rgba(13, 110, 253, 0.2);
+            margin-bottom: 10px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .bookmark:hover {
+            transform: scale(1.03);
+            box-shadow: 0 4px 8px rgba(13, 110, 253, 0.3);
+        }
+
+        .bookmark-title {
+            flex-grow: 1;
+            font-size: 14px;
+            font-weight: 500;
+            color: #172B4D;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            padding-right: 12px;
+        }
+
+   
+        .bookmark-controls {
+            display: flex;
+            gap: 10px;
+        }
+
+        .bookmark-controls img {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+            transition: transform 0.2s ease, opacity 0.2s ease;
+        }
+
+        .bookmark-controls img:hover {
+            transform: scale(1.15);
+            opacity: 0.8;
+        }
+
+  
+        .empty-message {
+            font-size: 14px;
+            color: #0D6EFD;
+            margin-top: 15px;
+            font-weight: 500;
+        }
+
+       
+        .footer {
+            margin-top: 15px;
+            font-size: 12px;
+            color: #172B4D;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <h1>📌 AlgoZenith Bookmarks</h1>
+    <ul id="bookmarks"></ul>
+    <p class="footer">Manage and access your problem bookmarks easily.</p>
+    <script src="popup.js"></script>
+</body>
+</html>
